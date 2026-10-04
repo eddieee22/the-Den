@@ -1,0 +1,231 @@
+/* ===========================================================
+   Project 1 stylesheet - shared by index.html and course.html
+   Color scheme and fonts are set as variables below so they
+   are easy to swap out without touching the rest of the file.
+   =========================================================== */
+
+:root {
+  --color-bg: #faf7f2;
+  --color-surface: #fff;
+  --color-text: #2b2b2b;
+  --color-primary: #3a5a78;
+  --color-accent: #c9622d;
+  --color-border: #dcd5c9;
+  --font-heading: georgia, "Times New Roman", serif;
+  --font-body: verdana, arial, helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 0.3rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.3rem;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* ---------- Header / Nav ---------- */
+
+.site-header {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.site-header h1 {
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* ---------- Main layout ---------- */
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- Home page specifics ---------- */
+
+#intro {
+  text-align: center;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  border: 3px solid var(--color-accent);
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+#classes ul {
+  padding-left: 1.3rem;
+}
+
+#classes li {
+  margin-bottom: 0.4rem;
+}
+
+/* ---------- Table ---------- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+}
+
+caption {
+  text-align: left;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+
+th, td {
+  border: 1px solid var(--color-border);
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+
+th {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--color-bg);
+}
+
+/* ---------- Gallery ---------- */
+
+#gallery {
+  text-align: center;
+}
+
+.gallery-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+
+figure {
+  margin: 0;
+}
+
+figure img {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  max-width: 100%;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  margin-top: 0.3rem;
+}
+
+/* ---------- Course page specifics ---------- */
+
+.course {
+  border-left: 4px solid var(--color-accent);
+  padding-left: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.course:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--color-border);
+}
+
+/* ---------- Small screens ---------- */
+
+@media (width <= 500px) {
+  .site-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  #gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+}
