@@ -1,0 +1,42 @@
+body {
+	background: #f5deb3;
+	font-family: "Times New Roman", serif;
+	font-size: 18px;
+}
+
+#game {
+	width: 340px;
+	margin: 20px auto;
+}
+
+#instructions {
+	font-weight: bold;
+}
+
+#buttons {
+	margin: 15px 0;
+	text-align: center;
+}
+
+#board {
+	border: 5px solid #4a72b8;
+	border-spacing: 2px;
+	background: #4a72b8;
+}
+
+#board td {
+	width: 76px;
+	height: 76px;
+	background: #d8bfd8;
+	border: 1px solid #555;
+	font-size: 28px;
+	font-weight: bold;
+	text-align: center;
+	cursor: pointer;
+	user-select: none;
+}
+
+#board td.empty {
+	background: #dcdcdc;
+	cursor: default;
+}
